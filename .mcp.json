@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "ctx7sk-d9ec8909-7a8b-4d08-8288-f1be8d46b8b6"
+      }
+    },
+    "once-ui-system": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@once-ui-system/mcp@latest"
+      ]
+    }
+  }
+}
+

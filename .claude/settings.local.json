@@ -1,0 +1,12 @@
+{
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7",
+    "once-ui-system"
+  ],
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.linkedin.com)"
+    ]
+  }
+}
