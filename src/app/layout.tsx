@@ -51,10 +51,10 @@ export default async function RootLayout({
       )}
     >
       <head>
-        <meta name="application-name" content="Aman Soni Portfolio" />
+        <meta name="application-name" content="Shipra Soni Portfolio" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Aman Soni" />
+        <meta name="apple-mobile-web-app-title" content="Shipra Soni" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#000000" />
