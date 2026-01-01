@@ -60,7 +60,7 @@ export default async function RootLayout({
         <meta name="theme-color" content="#000000" />
 
         {/* Google Search Console Verification - Replace with your actual verification code */}
-        <meta name="google-site-verification" content="B6xKo_NCa_N3vaDOyWMuwjkGbN54y5w-GCkg1ok_DkE" />
+        <meta name="google-site-verification" content="Q_ULq6bWRH3_GCcKZ7yhBx45lur0354wgkk1j8i2bXY" />
 
         {/* Structured Data (JSON-LD) */}
         <script
