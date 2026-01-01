@@ -22,8 +22,6 @@ const routes: RoutesConfig = {
   "/work": true,
   "/blog": true,
   "/gallery": true,
-  "/gamezone": false,
-  "/lab": false,
 };
 
 const display: DisplayConfig = {
@@ -36,7 +34,6 @@ const display: DisplayConfig = {
 // Set password in the .env file, refer to .env.example
 const protectedRoutes: ProtectedRoutesConfig = {
   "/work/design-system": true,
-  "/gamezone/chess": true,
 };
 
 // Import and set font for each variant

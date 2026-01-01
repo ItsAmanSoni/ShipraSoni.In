@@ -120,8 +120,6 @@ After verification, submit your sitemap to Google Search Console:
 - All blog posts (priority: 0.7)
 - All work projects (priority: 0.8)
 - Gallery (priority: 0.6)
-- GameZone (priority: 0.5)
-- Lab (priority: 0.6)
 
 ---
 

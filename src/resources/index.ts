@@ -8,8 +8,6 @@ export {
   blog,
   work,
   gallery,
-  gamezone,
-  lab,
 } from "./content";
 
 export {

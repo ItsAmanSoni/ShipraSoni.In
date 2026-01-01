@@ -27,8 +27,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/blog": 0.9,
     "/work": 0.9,
     "/gallery": 0.6,
-    "/gamezone": 0.5,
-    "/lab": 0.6,
   };
 
   const routes = activeRoutes.map((route) => ({
