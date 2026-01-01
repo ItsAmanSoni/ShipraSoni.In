@@ -23,13 +23,27 @@ import {
 } from "@/utils/structuredData";
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-    image: home.image,
-  });
+  return {
+    ...Meta.generate({
+      title: home.title,
+      description: home.description,
+      baseURL: baseURL,
+      path: home.path,
+      image: home.image,
+    }),
+    icons: {
+      icon: [
+        { url: '/icon.svg', type: 'image/svg+xml' },
+        { url: '/favicon.ico', sizes: '48x48' },
+      ],
+      apple: [
+        { url: '/apple-icon.svg', type: 'image/svg+xml' },
+      ],
+      other: [
+        { rel: 'icon', url: '/icons/icon-512x512.svg', type: 'image/svg+xml' },
+      ],
+    },
+  };
 }
 
 export default async function RootLayout({
@@ -77,7 +91,6 @@ export default async function RootLayout({
         />
 
         <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icons/icon-192x192.svg" />
 
         <script
           id="theme-init"
