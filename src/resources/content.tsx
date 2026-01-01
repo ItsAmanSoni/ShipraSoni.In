@@ -66,7 +66,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/task-planner-application",
+    href: "/work/digidelv-client-onboarding",
   },
   subline: (
     <>

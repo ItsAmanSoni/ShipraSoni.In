@@ -25,9 +25,9 @@ export const Footer = () => {
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
           <Text onBackground="neutral-weak">
-            {/* Usage of this template requires attribution. Please don't remove the link to Advaiya unless you have a Pro license. */}
+            {/* Usage of this template requires attribution. Please don't remove the link to DigiDelv unless you have a Pro license. */}
             /
-            <SmartLink href="https://www.advaiya.com">Advaiya</SmartLink>
+            <SmartLink href="https://www.digidelv.com">DigiDelv</SmartLink>
           </Text>
         </Text>
         <Row gap="16">

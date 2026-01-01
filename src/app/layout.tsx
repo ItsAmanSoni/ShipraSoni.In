@@ -77,7 +77,7 @@ export default async function RootLayout({
         />
 
         <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.svg" />
 
         <script
           id="theme-init"

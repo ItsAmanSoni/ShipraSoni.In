@@ -1,12 +1,14 @@
 {
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(node generate-icons.js:*)",
+      "Bash(npm run build:*)"
+    ]
+  },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "context7",
     "once-ui-system"
-  ],
-  "permissions": {
-    "allow": [
-      "WebFetch(domain:www.linkedin.com)"
-    ]
-  }
+  ]
 }

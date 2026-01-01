@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Icon Generator - Shipra Soni</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        h1 {
+            color: #1e293b;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .control-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #334155;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        select, input[type="color"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+        }
+
+        input[type="color"] {
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .icon-preview {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .preview-label {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        #iconCanvas {
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .size-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .size-btn {
+            padding: 12px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .size-btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+        }
+
+        .instructions {
+            background: #eff6ff;
+            border: 2px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .instructions h2 {
+            color: #1e40af;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #1e40af;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .color-presets {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .preset-color {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .preset-color:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .download-all-btn {
+            width: 100%;
+            padding: 16px;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: all 0.2s;
+        }
+
+        .download-all-btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>SS Icon Generator</h1>
+        <p class="subtitle">Create PWA icons for Shipra Soni's Portfolio</p>
+    </div>
+
+    <div class="controls">
+        <div class="control-group">
+            <label>Background Style</label>
+            <select id="bgStyle">
+                <option value="solid">Solid Color</option>
+                <option value="gradient">Gradient</option>
+                <option value="circle">Circle</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>Primary Color</label>
+            <div class="color-presets">
+                <div class="preset-color" style="background: #3b82f6" data-color="#3b82f6"></div>
+                <div class="preset-color" style="background: #2563eb" data-color="#2563eb"></div>
+                <div class="preset-color" style="background: #1d4ed8" data-color="#1d4ed8"></div>
+                <div class="preset-color" style="background: #0ea5e9" data-color="#0ea5e9"></div>
+                <div class="preset-color" style="background: #0284c7" data-color="#0284c7"></div>
+            </div>
+            <input type="color" id="primaryColor" value="#3b82f6">
+        </div>
+
+        <div class="control-group">
+            <label>Secondary Color (for gradient)</label>
+            <input type="color" id="secondaryColor" value="#2563eb">
+        </div>
+
+        <div class="control-group">
+            <label>Text Color</label>
+            <input type="color" id="textColor" value="#ffffff">
+        </div>
+
+        <div class="control-group">
+            <label>Font Weight</label>
+            <select id="fontWeight">
+                <option value="400">Regular</option>
+                <option value="500">Medium</option>
+                <option value="600">Semi Bold</option>
+                <option value="700" selected>Bold</option>
+                <option value="800">Extra Bold</option>
+                <option value="900">Black</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="icon-preview">
+        <span class="preview-label">Preview (512x512)</span>
+        <canvas id="iconCanvas" width="512" height="512"></canvas>
+
+        <div style="width: 100%;">
+            <label>Download Icon Size:</label>
+            <div class="size-options">
+                <button class="size-btn" onclick="downloadIcon(72)">72x72</button>
+                <button class="size-btn" onclick="downloadIcon(96)">96x96</button>
+                <button class="size-btn" onclick="downloadIcon(128)">128x128</button>
+                <button class="size-btn" onclick="downloadIcon(144)">144x144</button>
+                <button class="size-btn" onclick="downloadIcon(152)">152x152</button>
+                <button class="size-btn" onclick="downloadIcon(192)">192x192</button>
+                <button class="size-btn" onclick="downloadIcon(384)">384x384</button>
+                <button class="size-btn" onclick="downloadIcon(512)">512x512</button>
+            </div>
+            <button class="download-all-btn" onclick="downloadAllSizes()">📦 Download All Sizes</button>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h2>📋 How to Use</h2>
+        <ol>
+            <li>Customize the icon using the controls above</li>
+            <li>Click individual size buttons to download specific sizes, or use "Download All Sizes" to get everything at once</li>
+            <li>Replace the icons in <code>public/icons/</code> folder with the downloaded files</li>
+            <li>For favicon: Download the 512x512 size and convert it at <a href="https://favicon.io/favicon-converter/" target="_blank">favicon.io</a></li>
+            <li>Replace <code>src/app/favicon.ico</code> with the generated favicon</li>
+        </ol>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('iconCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Get controls
+        const bgStyle = document.getElementById('bgStyle');
+        const primaryColor = document.getElementById('primaryColor');
+        const secondaryColor = document.getElementById('secondaryColor');
+        const textColor = document.getElementById('textColor');
+        const fontWeight = document.getElementById('fontWeight');
+
+        // Color preset functionality
+        document.querySelectorAll('.preset-color').forEach(preset => {
+            preset.addEventListener('click', () => {
+                primaryColor.value = preset.dataset.color;
+                drawIcon();
+            });
+        });
+
+        // Draw icon function
+        function drawIcon() {
+            const size = 512;
+            ctx.clearRect(0, 0, size, size);
+
+            // Background
+            if (bgStyle.value === 'solid') {
+                ctx.fillStyle = primaryColor.value;
+                ctx.fillRect(0, 0, size, size);
+            } else if (bgStyle.value === 'gradient') {
+                const gradient = ctx.createLinearGradient(0, 0, size, size);
+                gradient.addColorStop(0, primaryColor.value);
+                gradient.addColorStop(1, secondaryColor.value);
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, size, size);
+            } else if (bgStyle.value === 'circle') {
+                ctx.fillStyle = primaryColor.value;
+                ctx.beginPath();
+                ctx.arc(size/2, size/2, size/2, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Draw "SS" text
+            ctx.fillStyle = textColor.value;
+            ctx.font = `${fontWeight.value} ${size * 0.45}px "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            // Add letter spacing
+            const text = 'SS';
+            const letterSpacing = size * 0.02;
+            const totalWidth = ctx.measureText(text).width + letterSpacing;
+            let x = (size - totalWidth) / 2;
+
+            for (let i = 0; i < text.length; i++) {
+                const char = text[i];
+                const charWidth = ctx.measureText(char).width;
+                ctx.fillText(char, x + charWidth / 2, size / 2);
+                x += charWidth + letterSpacing;
+            }
+        }
+
+        // Download single icon
+        function downloadIcon(size) {
+            const tempCanvas = document.createElement('canvas');
+            tempCanvas.width = size;
+            tempCanvas.height = size;
+            const tempCtx = tempCanvas.getContext('2d');
+
+            // Draw scaled version
+            const originalSize = 512;
+            tempCtx.clearRect(0, 0, size, size);
+
+            // Background
+            if (bgStyle.value === 'solid') {
+                tempCtx.fillStyle = primaryColor.value;
+                tempCtx.fillRect(0, 0, size, size);
+            } else if (bgStyle.value === 'gradient') {
+                const gradient = tempCtx.createLinearGradient(0, 0, size, size);
+                gradient.addColorStop(0, primaryColor.value);
+                gradient.addColorStop(1, secondaryColor.value);
+                tempCtx.fillStyle = gradient;
+                tempCtx.fillRect(0, 0, size, size);
+            } else if (bgStyle.value === 'circle') {
+                tempCtx.fillStyle = primaryColor.value;
+                tempCtx.beginPath();
+                tempCtx.arc(size/2, size/2, size/2, 0, Math.PI * 2);
+                tempCtx.fill();
+            }
+
+            // Draw text
+            tempCtx.fillStyle = textColor.value;
+            tempCtx.font = `${fontWeight.value} ${size * 0.45}px "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif`;
+            tempCtx.textAlign = 'center';
+            tempCtx.textBaseline = 'middle';
+
+            const text = 'SS';
+            const letterSpacing = size * 0.02;
+            const totalWidth = tempCtx.measureText(text).width + letterSpacing;
+            let x = (size - totalWidth) / 2;
+
+            for (let i = 0; i < text.length; i++) {
+                const char = text[i];
+                const charWidth = tempCtx.measureText(char).width;
+                tempCtx.fillText(char, x + charWidth / 2, size / 2);
+                x += charWidth + letterSpacing;
+            }
+
+            // Download
+            const link = document.createElement('a');
+            link.download = `icon-${size}x${size}.png`;
+            link.href = tempCanvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Download all sizes
+        async function downloadAllSizes() {
+            const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
+
+            for (const size of sizes) {
+                await new Promise(resolve => {
+                    downloadIcon(size);
+                    setTimeout(resolve, 200); // Small delay between downloads
+                });
+            }
+
+            alert('All icon sizes downloaded! Check your Downloads folder.');
+        }
+
+        // Event listeners
+        bgStyle.addEventListener('change', drawIcon);
+        primaryColor.addEventListener('input', drawIcon);
+        secondaryColor.addEventListener('input', drawIcon);
+        textColor.addEventListener('input', drawIcon);
+        fontWeight.addEventListener('change', drawIcon);
+
+        // Initial draw
+        drawIcon();
+    </script>
+</body>
+</html>
