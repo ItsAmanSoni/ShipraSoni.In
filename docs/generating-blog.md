@@ -116,10 +116,17 @@ People connect with clarity, not complexity.
 
 Once a month:
 
-“I’m writing my next blog. What should I break down — lead gen, pricing, or closing?”
+"I'm writing my next blog. What should I break down — lead gen, pricing, or closing?"
 
-When people vote, they’re already emotionally invested.
+When people vote, they're already emotionally invested.
 
 10️⃣ One golden rule 🧠
 
-If a blog doesn’t make the reader think, nod, or reply, it’s not done yet.
+If a blog doesn't make the reader think, nod, or reply, it's not done yet.
+
+---
+
+## Blog Posts Generated
+
+- [Growth Doesn't Happen Overnight — And That's Okay](/blog/growth-doesnt-happen-overnight) - Published: 2026-01-04
+  - LinkedIn Post: `docs/linkedin-post-growth-doesnt-happen-overnight.md`
