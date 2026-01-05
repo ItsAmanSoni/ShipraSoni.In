@@ -128,5 +128,8 @@ If a blog doesn't make the reader think, nod, or reply, it's not done yet.
 
 ## Blog Posts Generated
 
+- [Why Business Development Is the Backbone of Any Company](/blog/business-development-backbone-of-company) - Published: 2026-01-05
+  - LinkedIn Post: `docs/linkedin-post-business-development-backbone.md`
+
 - [Growth Doesn't Happen Overnight — And That's Okay](/blog/growth-doesnt-happen-overnight) - Published: 2026-01-04
   - LinkedIn Post: `docs/linkedin-post-growth-doesnt-happen-overnight.md`
