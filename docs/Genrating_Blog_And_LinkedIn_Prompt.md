@@ -67,4 +67,4 @@ You’re not alone 🤍
 also first you create a blog post and then create linkedin post attaching blog post with this website link 
 https://shiprasoni.in/blog/{your-blog-post-slug}
 
-linked in account will be https://www.linkedin.com/in/its-shipra-soni/
+LinkedIn account will be https://www.linkedin.com/in/its-shipra-soni/
