@@ -1,51 +1,41 @@
 Please generate blog post and linked in post from this content Below 
 
 "
-Business grows when you solve real problems.
+Your future success is watching your daily habits.
 
-Not when you post every day.
-Not when your logo looks perfect.
-Not when you talk only about features.
+Not your big goals.
+Not your motivational posts.
+Not even your talent.
 
-It grows when you understand what actually hurts your client.
+Your habits.
 
-Most people try to sell what they have.
-Smart businesses focus on what the client needs.
+The way you start your mornings.
+The promises you keep to yourself.
+The effort you show when no one is clapping.
 
-Here’s the truth 👇
+Success isn’t built in dramatic moments.
+It’s built in boring routines:
 
-People don’t wake up wanting your service.
-They wake up wanting their problem gone.
+• Showing up even when motivation disappears
+• Choosing consistency over comfort
+• Improving 1% instead of chasing perfection
+• Doing the work when no one is watching.
 
-• Less stress
-• More clarity
-• Better results
-• Peace of mind
-• Growth without confusion
+Most people wait for confidence.
+Successful people build habits first—
+and confidence follows.
 
-When you listen more than you speak,
-When you ask better questions,
-When you stop assuming and start understanding—
+Look closely at your daily actions.
+They’re quietly shaping the life you’ll live tomorrow.
 
-That’s when trust begins.
-That’s when conversations turn into conversions.
+So ask yourself:
+What kind of future am I practicing today?
 
-Business development is not about convincing.
-It’s about connecting.
-
-I learned this the hard way.
-The moment I stopped chasing clients
-and started solving problems—
-everything changed.
-
-If your business feels stuck, ask yourself:
-👉 Am I selling… or am I solving?
-
-Because growth follows value.
-And value starts with real problems.
+Because your future success is watching.
+And it’s learning from everything you do.
 "
 
-image link - /workspaces/ShipraSoni.In/public/images/blog/business-grows-when-you-solve.jpeg
+image link - /workspaces/ShipraSoni.In/public/images/blog/your-future-is-watching.jpeg
 
 also first you create a blog post and then create linkedin post attaching blog post with this website link 
 https://shiprasoni.in/blog/{your-blog-post-slug}
